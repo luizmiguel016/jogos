@@ -35,12 +35,8 @@ public class Jogos {
         int linha_aleatoria = random.nextInt(tamanho_tabuleiro);
         int coluna_inicio = random.nextInt(tamanho_tabuleiro - palavra_selecionada_caca.length());
 
-        for (int i = 0; i < tamanho_tabuleiro; i++) {
-            for (int j = 0; j < tamanho_tabuleiro; j++) {
-                if(i < palavra_selecionada_caca.length()){
-                    tabuleiro_caca[linha_aleatoria][coluna_inicio + i] = palavra_selecionada_caca.charAt(i);
-                }
-            }
+        for (int i = 0; i < palavra_selecionada_caca.length(); i++) {
+            tabuleiro_caca[linha_aleatoria][coluna_inicio + i] = palavra_selecionada_caca.charAt(i);
         }
     }
 
